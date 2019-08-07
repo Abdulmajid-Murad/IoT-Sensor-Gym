@@ -204,10 +204,11 @@ class SensorGymEnv(gym.Env):
         forecast_day= dfx['w_forecast'].resample('D').sum()
         daterange = forecast_day.index
         for i in range(forecast_days):
-            forecast_day.loc[forecast_day.index[-1]+1]= forecast_day.loc[forecast_day.index[i]]
+            forecast_day.loc[forecast_day.index[-1]+1*daterange.freq]= forecast_day.loc[forecast_day.index[i]]
         forecast= forecast_day.rolling(str(forecast_days)+'D').sum().shift(-(forecast_days-1))[:-forecast_days]
         return {'dataframe': dfx, 'w_forecast': forecast}
         
+    
     
     def _solar_intake(self, t, solar_context):
         dfx = solar_context['dataframe']
