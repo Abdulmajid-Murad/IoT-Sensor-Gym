@@ -4,7 +4,7 @@ Welcome to Sensor Gym!
 =====================
 Sensor Gym is framework to train the behavior of constrained IoT devices using deep reinforcement learning.
 
-![Sensor Gym Setup](/docs/setup.pdf)
+![Sensor Gym Setup](/docs/setup.png)
 
 
 Read more on:
