@@ -11,7 +11,8 @@ class SensorGymEnv(gym.Env):
         energy-harvesting IoT. It is based on a realistic IoT node specification
         (scaled up version of TMote Sky node).
         
-        **INPUTS:** to Initialize Env
+        **INPUTS:** to Initialize Env 
+        
         solar_file: solar radiation data 
         city: to calculate zenith & azimuth
         forecast_days: days in include in weather forecast
